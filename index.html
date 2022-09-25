@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&family=Tangerine&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="upper">
+            <div class="day-night"></div>
+        </div>
+        <div class="date"></div>
+        <div class="input-panel">
+            <input type="text" class="task-name-input" placeholder="New task">
+            <div id="add-task-btn">
+                <img class="add-task-btn" src="https://cdn-icons-png.flaticon.com/512/4277/4277132.png">
+            </div>
+        </div>
+    </header>
+
+    <main class="task-list"></main>
+
+    <footer class="buttons">
+        <div class="items-number"></div>
+        <div class="sort-buttons">
+            <div id="active-tasks" class="btn">Active</div>
+            <div id="checked-tasks" class="btn">Done</div>
+            <div id="all-tasks" class="btn">All</div>
+        </div>
+        <div class="delete-all">
+            <div class="DA"></div>
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script defer src="Script.js"></script>
+</body>
+</html>

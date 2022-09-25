@@ -1,0 +1,314 @@
+html{
+    height: 100%;
+}
+
+html, body, .header, main {
+    margin: 0;
+    padding: 0;
+}
+.task-list, .start-message, .task-name-input, .input-panel, .task {
+    margin: 0;
+}
+
+
+body{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    background: radial-gradient(#9ec5de, #2950ab);
+    background-size: cover;
+}
+
+.container{
+    margin: auto;
+    height: 800px;
+    width: 500px;
+    border-radius: 20px;
+    border: 2px solid #e1dfe3;
+    box-shadow: 4px 4px 4px #1f34bd;
+}
+
+/*---------------(Header section)----------*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 183px;
+    width: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: url("https://rare-gallery.com/uploads/posts/585704-background-blue.jpg");
+    background-size: cover;
+}
+
+.upper{
+    display: flex;
+    justify-content: flex-end;
+    height: 65px;
+}
+
+
+
+.day-night{
+    height: 30px;
+    width: 30px;
+    background: url("https://cdn-icons-png.flaticon.com/512/2720/2720081.png");
+    background-size: cover;
+    margin: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.date {
+    color: aliceblue;
+    height: 65px;
+    font-family: 'Rouge Script', cursive;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.input-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    width: auto;
+    padding: 0;
+    border-bottom: 2px solid white;
+    background-color: #ffffff;
+}
+
+.task-name-input {
+    height: auto;
+    width: 87%;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background: transparent;
+    padding-left: 10px;
+    font-size: xx-large;
+    font-family: Caveat;
+    font-style: italic;
+    color: #2571b6;
+}
+
+#add-task-btn {
+    height: 45px;
+    width: 45px;
+    margin: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.add-task-btn{
+    height: 40px;
+    width: 40px;
+}
+
+/*---------------(Main section)----------*/
+
+.task-list {
+    width: auto;
+    height: 525px;
+    background: radial-gradient(#9ec5de, #336cf1);
+    padding: 10px;
+    overflow: scroll;
+}
+
+.start-message{
+    text-align: center;
+    font-size: 60px;
+    font-family: "Snell Roundhand", cursive;
+    color: aliceblue;
+}
+
+.task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    margin: 10px;
+    padding: 3px 8px;
+    border-radius: 15px;
+    border: none;
+    font-size: xx-large;
+    /*font-family: Caveat;*/
+    font-style: italic;
+    color: aliceblue;
+    background: radial-gradient(#9ec5de, #0836a1);
+}
+
+.checkbox{
+    height: auto;
+    width: 10px;
+    margin: 5px;
+}
+
+.task-paragraph{
+    width: 390px;
+    overflow: auto;
+    margin: 10px;
+    text-align: center;
+}
+
+.delete-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete-task-imj{
+    height: 40px;
+    width: 40px;
+}
+
+/*---------------(Footer section)----------*/
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: auto;
+    border-top: 2px solid white;
+    background: radial-gradient(#9ec5de, #082a7e);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.items-number, .delete-all{
+    width: 90px;
+    margin: 10px;
+}
+
+.items-number{
+    color: white;
+    font-size: x-large;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 70px;
+    border-radius: 25%;
+    background: radial-gradient(#9ec5de, #336cf1);
+    border: 2px solid #0e1d7e;
+    margin: 5px;
+    line-height: 60px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover {
+    filter: brightness(130%);
+}
+.btn:active {
+    filter: brightness(90%);
+}
+
+.sort-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.delete-all{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.DA{
+    height: 45px;
+    width: 45px;
+    background: url("http://s1.iconbird.com/ico/0912/Radium/w256h2561348762832RecycleBinEmpty.png");
+    background-size: cover;
+}
+
+.upper:hover div{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
+
+#add-task-btn:hover img{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
+
+.delete-all:hover div{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
+
+.delete-task:hover img{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
+
+
+/*---------------(Night mode)----------*/
+
+.body-night{
+    background: radial-gradient(#9ec5de, #761fbd);
+}
+
+.container-night{
+    box-shadow: 4px 4px 4px #500e7e;
+}
+
+.header-night{
+    background: url("https://images5.alphacoders.com/106/1064762.jpg");
+    background-size: cover;
+}
+
+.night-mode{
+    background: url("https://cdn-icons-png.flaticon.com/512/547/547433.png");
+    background-size: cover;
+}
+
+.task-name-input-night{
+    color: #9347e1;
+}
+
+.task-list-night{
+    background: radial-gradient(#9ec5de, #761fbd);
+}
+
+.task-night{
+    background: radial-gradient(#9ec5de, #4f107c);
+}
+
+.footer-night{
+    background: radial-gradient(#9ec5de, #420c67);
+}
+
+.btn-night{
+    background: radial-gradient(#9ec5de, #761fbd);
+    border: 2px solid #250d67;
+}
+
+
+/*---------------(Checked mode)----------*/
+
+.task-checked{
+    background: radial-gradient(#9ec5de, #004900);
+}
+
+.task-paragraph-checked{
+    text-decoration: line-through;
+    color: gray;
+}
