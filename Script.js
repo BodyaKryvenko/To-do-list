@@ -166,10 +166,10 @@ function startText() {
     let p = document.createElement("p");
     p.classList.add("start-message");
     p.innerText = `Нет новых задач`
-    if (itemsNumber === 0){
+    if (taskList.innerHTML === ""){
         taskList.append(p);
     }
-    else {
+    if (itemsNumber > 0) {
         let startMessage = document.querySelectorAll(".start-message");
         for (let values of startMessage){
             values.remove();
