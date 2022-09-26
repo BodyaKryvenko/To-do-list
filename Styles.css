@@ -144,9 +144,20 @@ header {
 }
 
 .checkbox{
-    height: auto;
-    width: 10px;
+    height: 20px;
+    width: 20px;
+    border: 3px outset #0b0985;
+    border-radius: 50%;
     margin: 5px;
+    background: radial-gradient(#9ec5de, #336cf1);
+}
+
+.check-mark{
+    height: 30px;
+    width: 30px;
+    border: none;
+    background: url("https://winx-fan.ru/800/600/https/cdn-ru.bitrix24.by/b9518285/landing/f69/f69de9a00a6147550e993ce4ddb6d519/OK-Clipart-PNG-Image_1x.png");
+    background-size: cover;
 }
 
 .task-paragraph{
@@ -249,6 +260,11 @@ footer{
     transition: transform 0.25s;
 }
 
+.task:hover .check-mark{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
+
 .delete-all:hover div{
     transform: scale(1.2);
     transition: transform 0.25s;
@@ -290,6 +306,11 @@ footer{
 
 .task-night{
     background: radial-gradient(#9ec5de, #4f107c);
+}
+
+.checkbox-night{
+    border: 3px outset #220744;
+    background: radial-gradient(#9ec5de, #761fbd);
 }
 
 .footer-night{

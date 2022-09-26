@@ -107,10 +107,9 @@ class Task {
             this.div.classList.add("task-night")
         }
 
-        let input = document.createElement("input");
-        input.addEventListener("click", () => this.changeState(this.div));
-        input.type = "checkbox";
-        input.classList.add("checkbox")
+        let checkedMark = document.createElement("div");
+        checkedMark.addEventListener("click", () => this.changeState(this.div, checkedMark));
+        checkedMark.classList.add("checkbox")
 
         let p = document.createElement("p");
         p.innerText = this.text;
@@ -138,26 +137,29 @@ class Task {
         if (this.isDone){
             this.div.classList.add("task-checked");
             p.classList.add("task-paragraph-checked");
-            input.checked = true;
+            checkedMark.classList.add("check-mark");
+            // checkedMark.checked = true;
         }
         else {
             this.div.classList.remove("task-checked");
             p.classList.remove("task-paragraph-checked");
-            input.checked = false;
+            checkedMark.classList.remove("check-mark");
+            // input.checked = false;
         }
 
         deleteDiv.append(deleteDivImg);
-        this.div.append(input);
+        this.div.append(checkedMark);
         this.div.append(p);
         this.div.append(deleteDiv);
         element.append(this.div);
     }
 
-    changeState(element) {
+    changeState(element, mark) {
         this.isDone = !this.isDone;
         element.classList.toggle("task-checked");
         let child = element.children;
         child[1].classList.toggle("task-paragraph-checked");
+        mark.classList.toggle("check-mark");
     }
 
 }
@@ -188,16 +190,26 @@ function dayNight(){
     taskNameInput.classList.toggle("task-name-input-night");
     taskList.classList.toggle("task-list-night");
     let tsks = document.querySelectorAll(".task");
+    let marks = document.querySelectorAll(".checkbox");
     if (nightMode){
         for (let elements of tsks){
             elements.classList.add("task-night");
+        }
+
+        for (let elements of marks){
+            elements.classList.add("checkbox-night");
         }
     }
     else {
         for (let elements of tsks){
             elements.classList.remove("task-night");
         }
+
+        for (let elements of marks){
+            elements.classList.add("checkbox-night");
+        }
     }
+
     document.querySelector("footer").classList.toggle("footer-night");
     let btn = document.querySelectorAll(".btn");
     for (let elements of btn){
