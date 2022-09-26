@@ -51,7 +51,10 @@ header {
     height: 65px;
 }
 
-
+.upper:hover div{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
 
 .day-night{
     height: 30px;
@@ -91,7 +94,7 @@ header {
     background: transparent;
     padding-left: 10px;
     font-size: xx-large;
-    font-family: Caveat;
+    /*font-family: Caveat;*/
     font-style: italic;
     color: #2571b6;
 }
@@ -102,6 +105,11 @@ header {
     margin: 5px;
     cursor: pointer;
     user-select: none;
+}
+
+#add-task-btn:hover img{
+    transform: scale(1.2);
+    transition: transform 0.25s;
 }
 
 .add-task-btn{
@@ -142,6 +150,10 @@ header {
     color: aliceblue;
     background: radial-gradient(#9ec5de, #0836a1);
 }
+.task:hover .check-mark{
+    transform: scale(1.2);
+    transition: transform 0.25s;
+}
 
 .task:hover {
     filter: brightness(115%);
@@ -180,6 +192,11 @@ header {
     margin: 5px;
     cursor: pointer;
     user-select: none;
+}
+
+.delete-task:hover img{
+    transform: scale(1.2);
+    transition: transform 0.25s;
 }
 
 .delete-task-imj{
@@ -247,36 +264,16 @@ footer{
     user-select: none;
 }
 
-.DA{
-    height: 45px;
-    width: 45px;
-    background: url("http://s1.iconbird.com/ico/0912/Radium/w256h2561348762832RecycleBinEmpty.png");
-    background-size: cover;
-}
-
-.upper:hover div{
-    transform: scale(1.2);
-    transition: transform 0.25s;
-}
-
-#add-task-btn:hover img{
-    transform: scale(1.2);
-    transition: transform 0.25s;
-}
-
-.task:hover .check-mark{
-    transform: scale(1.2);
-    transition: transform 0.25s;
-}
-
 .delete-all:hover div{
     transform: scale(1.2);
     transition: transform 0.25s;
 }
 
-.delete-task:hover img{
-    transform: scale(1.2);
-    transition: transform 0.25s;
+.DA{
+    height: 45px;
+    width: 45px;
+    background: url("http://s1.iconbird.com/ico/0912/Radium/w256h2561348762832RecycleBinEmpty.png");
+    background-size: cover;
 }
 
 
@@ -311,11 +308,6 @@ footer{
 .task-night{
     background: radial-gradient(#9ec5de, #4f107c);
 }
-
-/*.checkbox-night{*/
-/*    border: 3px outset #220744;*/
-/*    background: radial-gradient(#9ec5de, #a448f3);*/
-/*}*/
 
 .footer-night{
     background: radial-gradient(#9ec5de, #420c67);

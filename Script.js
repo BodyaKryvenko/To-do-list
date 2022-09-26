@@ -196,24 +196,16 @@ function dayNight(){
     taskNameInput.classList.toggle("task-name-input-night");
     taskList.classList.toggle("task-list-night");
     let tsks = document.querySelectorAll(".task");
-    // let marks = document.querySelectorAll(".checkbox");
     if (nightMode){
         for (let elements of tsks){
             elements.classList.add("task-night");
         }
 
-        // for (let elements of marks){
-        //     elements.classList.add("checkbox-night");
-        // }
     }
     else {
         for (let elements of tsks){
             elements.classList.remove("task-night");
         }
-
-        // for (let elements of marks){
-        //     elements.classList.remove("checkbox-night");
-        // }
     }
 
     document.querySelector("footer").classList.toggle("footer-night");
