@@ -146,10 +146,10 @@ header {
 .checkbox{
     height: 20px;
     width: 20px;
-    border: 3px outset #0b0985;
+    border: 3px double #770909;
     border-radius: 50%;
     margin: 5px;
-    background: radial-gradient(#9ec5de, #336cf1);
+    background: radial-gradient(#9ec5de, #7e9ade);
 }
 
 .check-mark{
@@ -308,10 +308,10 @@ footer{
     background: radial-gradient(#9ec5de, #4f107c);
 }
 
-.checkbox-night{
-    border: 3px outset #220744;
-    background: radial-gradient(#9ec5de, #761fbd);
-}
+/*.checkbox-night{*/
+/*    border: 3px outset #220744;*/
+/*    background: radial-gradient(#9ec5de, #761fbd);*/
+/*}*/
 
 .footer-night{
     background: radial-gradient(#9ec5de, #420c67);
