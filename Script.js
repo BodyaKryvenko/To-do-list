@@ -11,7 +11,7 @@ let deleteAll = document.querySelector(".delete-all");
 let items = document.querySelector(".items-number");
 let itemsNumber = 0;
 
-items.textContent = `Items: ${itemsNumber}`;
+items.textContent = `Item(s): ${itemsNumber}`;
 startText();
 dayNightMode.addEventListener("click", dayNight);
 
@@ -25,7 +25,7 @@ allTasks.addEventListener("click", () => {
         allTasks.createIn(taskList);
     }
     itemsNumber = tasks.length;
-    items.textContent = `Items: ${itemsNumber}`;
+    items.textContent = `Item(s): ${itemsNumber}`;
     startText()
 
 });
@@ -40,7 +40,7 @@ doneTasks.addEventListener("click", () => {
             itemsNumber += 1;
         }
     }
-    items.textContent = `Items: ${itemsNumber}`;
+    items.textContent = `Item(s): ${itemsNumber}`;
     startText();
 });
 
@@ -54,14 +54,14 @@ activeTasks.addEventListener("click", () => {
             itemsNumber += 1;
         }
     }
-    items.textContent = `Items: ${itemsNumber}`;
+    items.textContent = `Item(s): ${itemsNumber}`;
     startText();
 });
 
 deleteAll.addEventListener("click", () => {
     tasks = [];
     itemsNumber = 0;
-    items.textContent = `Items: ${itemsNumber}`;
+    items.textContent = `Item(s): ${itemsNumber}`;
     taskList.innerHTML = '';
     startText();
 })
@@ -87,7 +87,7 @@ function addTaskHandler() {
     } else {
         alert("введите имя задачи");
     }
-    items.textContent = `Items: ${itemsNumber}`;
+    items.textContent = `Item(s): ${itemsNumber}`;
     startText();
 }
 
@@ -126,7 +126,7 @@ class Task {
             }
             deleteDiv.parentElement.remove()
             itemsNumber -= 1;
-            items.textContent = `Items: ${itemsNumber}`;
+            items.textContent = `Item(s): ${itemsNumber}`;
             startText();
         })
 
@@ -158,6 +158,14 @@ class Task {
         let child = element.children;
         child[1].classList.toggle("task-paragraph-checked");
         mark.classList.toggle("check-mark");
+
+        for (let i = 0; i < tasks.length; i++){
+            let paragraph = element.children[1];
+            console.log(paragraph);
+            if (tasks[i].text === paragraph.innerText){
+                tasks[i].isDone = this.isDone;
+            }
+        }
     }
 
 }
@@ -237,6 +245,9 @@ function formatDate() {
 }
 let now = new Date();
 formatDate();
+
+
+
 
 
 
