@@ -173,7 +173,7 @@ class Task {
 function startText() {
     let p = document.createElement("p");
     p.classList.add("start-message");
-    p.innerText = `Нет новых задач`
+    p.innerText = `No Tasks Yet`
     if (taskList.innerHTML === ""){
         taskList.append(p);
     }
